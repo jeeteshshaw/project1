@@ -1,0 +1,33 @@
+{
+    "potfolios": {
+        "basicInfo": {
+            "name": "Profile",
+            "email": null,
+            "contact_no": [],
+            "address": null,
+            "about_my_self": null,
+            "blackList": []
+        },
+        "socialLinks": {
+            "github_link": null,
+            "facebook": null,
+            "linkedin": null,
+            "codeCafe": null,
+            "blackList": []
+        },
+        "token": [],
+        "mode": "dev",
+        "permitUrl": [],
+        "skills": [],
+        "_id": "61e3079b6bddbfc4f1e60785",
+        "education": [],
+        "experience": [],
+        "projects": [],
+        "achievements": [],
+        "othersLinks": [],
+        "user_id": "61ca156cbf14c30275163d34",
+        "createdAt": "2022-01-15T17:42:51.397Z",
+        "updatedAt": "2022-01-15T17:42:51.397Z",
+        "__v": 0
+    }
+}
