@@ -48,7 +48,7 @@ app.use("/retail", RetailerRoute)
 
 app.get("/", (req, res)=>{
     const data = []
-    
+    return res.send("Server is running")
     
 })
 
