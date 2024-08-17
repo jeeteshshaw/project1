@@ -180,10 +180,37 @@ const StoreCreate = async (req, res) => {
 };
 
 
+// Controller to create a new store
+const StoreGet = async (req, res) => {
+    try {
+       
+
+        // Create a new store instance
+        const newStore = await StoreModal.find({});
+
+
+        console.log(newStore);
+        
+        // Respond with the saved store data
+        return res.status(200).json({
+            message: 'Store fetch successfully!',
+            store: newStore
+        });
+    } catch (error) {
+        console.error('Error fetch store:', error);
+        res.status(500).json({
+            message: 'Failed to fetch store',
+            error: error.message
+        });
+    }
+};
+
+
 
 module.exports = {
     RetailerLogin,
     RetailerSignup,
     StoreUserCreate,
-    StoreCreate
+    StoreCreate,
+    StoreGet
 }
