@@ -19,8 +19,8 @@ require('dotenv').config()
 var sqlite3 = require('sqlite3').verbose();
 var db = new sqlite3.Database('database.sqlite');
 mongoose.connect(
-    // process.env.DB_LINK 
-    // ||
+    process.env.DB_LINK 
+    ||
     'mongodb://localhost:27017/project_one'
     , {useNewUrlParser: true, useUnifiedTopology: true},(error)=>{
     if(error)
