@@ -10,7 +10,7 @@ const port = process.env.PORT || 8080;
 const server = http.createServer(app);
 
 
-// const AuthRoute  = require("./routes/auth")
+const AdminRoute  = require("./routes/admin")
 // const MainRoute  = require("./routes/main")
 const RetailerRoute  = require("./routes/Retailer")
 
@@ -19,8 +19,8 @@ require('dotenv').config()
 var sqlite3 = require('sqlite3').verbose();
 var db = new sqlite3.Database('database.sqlite');
 mongoose.connect(
-    process.env.DB_LINK 
-    ||
+    // process.env.DB_LINK 
+    // ||
     'mongodb://localhost:27017/project_one'
     , {useNewUrlParser: true, useUnifiedTopology: true},(error)=>{
     if(error)
@@ -43,7 +43,7 @@ app.use(bodyParser.json())
 
 
 
-// app.use("/auth", AuthRoute)
+app.use("/admin", AdminRoute)
 app.use("/retail", RetailerRoute)
 
 app.get("/", (req, res)=>{

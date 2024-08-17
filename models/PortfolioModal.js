@@ -1,10 +1,6 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const fs = require("fs");
-const path = require("path");
-const { notify } = require('../routes/admin/login');
-const { stringify } = require('querystring');
 const Schema = mongoose.Schema;
 const secretKey =  fs.readFileSync("./cert/private.pem")
 const publicKey =  fs.readFileSync("./cert/public.pem")

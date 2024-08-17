@@ -2,8 +2,6 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const fs = require("fs");
-const path = require("path");
-const { notify } = require('../routes/admin/login');
 const Schema = mongoose.Schema;
 const secretKey =  fs.readFileSync("./cert/private.pem")
 const publicKey =  fs.readFileSync("./cert/public.pem")
@@ -96,6 +94,6 @@ UserSchema.methods.verifyToken = (token)=> jwt.verify(token, publicKey, (err, da
 });
 
 
-const UserModal = mongoose.model("Users", UserSchema);
+const UserModal = mongoose.model("AdminUsers", UserSchema);
 
 module.exports = UserModal;
